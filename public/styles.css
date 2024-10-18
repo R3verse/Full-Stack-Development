@@ -1,0 +1,194 @@
+/* public/styles.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  max-width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+ul li p {
+  margin-bottom: 10px;
+}
+
+a {
+  margin-right: 10px;
+  color: #0275d8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout adjustments */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flexbox layout for larger screens */
+@media only screen and (min-width: 992px) {
+  .content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-wrapper,
+  .posts-wrapper {
+    width: 48%;
+  }
+}
+
+/* Mobile-first styles */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  form {
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  ul li {
+    padding: 15px;
+  }
+
+  ul li h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Tablet styles (for mid-sized devices like iPads) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1.1em;
+  }
+
+  ul li {
+    padding: 20px;
+  }
+
+  ul li h3 {
+    font-size: 1.4em;
+  }
+}
+
+/* Footer styles */
+/* Ensure the body takes up the full height of the viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* The container should take the remaining space available */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the container span at least the full viewport height */
+}
+
+/* Main content should grow and take up all available vertical space */
+.content-wrapper {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}

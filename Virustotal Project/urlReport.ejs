@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>URL Scan Report</title>
+  </head>
+  <body>
+    <h1>Scan Report for URL: <%= report.resource %></h1>
+    <p>Response Code: <%= report.response_code %></p>
+    <ul>
+      <% for (const [key, value] of Object.entries(report.scans)) { %>
+      <li><%= key %>: <%= value.result || 'No Result' %></li>
+      <% } %>
+    </ul>
+    <a href="/">Back to Home</a>
+  </body>
+</html>

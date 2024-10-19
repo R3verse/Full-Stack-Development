@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scan Results</title>
+  </head>
+  <body>
+    <h1>Scan Results for <%= results.resource %></h1>
+    <ul>
+      <% for (const [key, value] of Object.entries(results.positives)) { %>
+      <li><%= key %>: <%= value %></li>
+      <% } %>
+    </ul>
+
+    <h2>Total Scans: <%= results.total %></h2>
+    <h2>Detailed Results:</h2>
+    <pre><%= JSON.stringify(results, null, 2) %></pre>
+    <!-- Display the entire results object for debugging -->
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>VirusTotal Scanner</title>
+  </head>
+  <body>
+    <h1>VirusTotal File and URL Scanner</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" required />
+      <button type="submit">Scan File</button>
+    </form>
+    <form action="/scan-url" method="POST">
+      <label for="url">Enter URL to scan:</label>
+      <input type="text" name="url" required />
+      <button type="submit">Scan URL</button>
+    </form>
+  </body>
+</html>
